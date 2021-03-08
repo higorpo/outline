@@ -140,9 +140,9 @@ Team.prototype.provisionSubdomain = async function (subdomain) {
 
 Team.prototype.provisionFirstCollection = async function (userId) {
   const collection = await Collection.create({
-    name: "Welcome",
+    name: "Olá!",
     description:
-      "This collection is a quick guide to what Outline is all about. Feel free to delete this collection once your team is up to speed with the basics!",
+      "Esta coleção é um guia rápido do que trata o Outline. Sinta-se à vontade para excluir esta coleção assim que sua equipe estiver familiarizada com o básico!",
     teamId: this.id,
     createdById: userId,
     sort: Collection.DEFAULT_SORT,
@@ -151,10 +151,11 @@ Team.prototype.provisionFirstCollection = async function (userId) {
   // For the first collection we go ahead and create some intitial documents to get
   // the team started. You can edit these in /server/onboarding/x.md
   const onboardingDocs = [
-    "Support",
-    "Integrations & API",
-    "Our Editor",
-    "What is Outline",
+    "Agradecimentos",
+    "Suporte",
+    "Integrações",
+    "Nosso editor",
+    "O que é o Outline",
   ];
   for (const title of onboardingDocs) {
     const text = await readFile(
