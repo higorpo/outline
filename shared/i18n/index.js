@@ -7,15 +7,15 @@ import { initReactI18next } from "react-i18next";
 // locales array in app/components/LocaleTime.js to enable translation for timestamps.
 export const languageOptions = [
   { label: "English (US)", value: "en_US" },
-  { label: "简体中文 (Chinese, Simplified)", value: "zh_CN" },
-  { label: "Deutsch (Deutschland)", value: "de_DE" },
-  { label: "Español (España)", value: "es_ES" },
-  { label: "Français (France)", value: "fr_FR" },
-  { label: "Italiano (Italia)", value: "it_IT" },
-  { label: "한국어 (Korean)", value: "ko_KR" },
+  //   { label: "简体中文 (Chinese, Simplified)", value: "zh_CN" },
+  //   { label: "Deutsch (Deutschland)", value: "de_DE" },
+  //   { label: "Español (España)", value: "es_ES" },
+  //   { label: "Français (France)", value: "fr_FR" },
+  //   { label: "Italiano (Italia)", value: "it_IT" },
+  //   { label: "한국어 (Korean)", value: "ko_KR" },
   { label: "Português (Portugal)", value: "pt_PT" },
   { label: "Português (Brasil)", value: "pt_BR" },
-  { label: "Pусский (Россия)", value: "ru_RU" },
+  //   { label: "Pусский (Россия)", value: "ru_RU" },
 ];
 
 export const languages: string[] = languageOptions.map((i) => i.value);

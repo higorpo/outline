@@ -27,19 +27,19 @@ export function slackAuth(
 }
 
 export function githubUrl(): string {
-  return "https://www.github.com/outline";
+  return "https://www.github.com/higorpo";
 }
 
 export function githubIssuesUrl(): string {
-  return "https://www.github.com/outline/outline/issues";
+  return "https://www.github.com/higorpo/outline/issues";
 }
 
-export function twitterUrl(): string {
-  return "https://twitter.com/outlinewiki";
+export function instagramUrl(): string {
+  return "https://instagram.com/ejpixel";
 }
 
 export function mailToUrl(): string {
-  return "mailto:hello@getoutline.com";
+  return "mailto:projetos@ejpixel.com.br";
 }
 
 export function developers(): string {
