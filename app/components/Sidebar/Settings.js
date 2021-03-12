@@ -135,12 +135,12 @@ function SettingsSidebar() {
               )}
             </Section>
           )}
-          {can.update && !isHosted && (
+          {/* {can.update && !isHosted && (
             <Section>
               <Header>{t("Installation")}</Header>
               <Version />
             </Section>
-          )}
+          )} */}
         </Scrollable>
       </Flex>
     </Sidebar>
