@@ -126,13 +126,13 @@ function DocumentListItem(props: Props) {
             &nbsp;
           </>
         )}
-        <DocumentMenu
+        {/* <DocumentMenu
           document={document}
           showPin={showPin}
           onOpen={() => setMenuOpen(true)}
           onClose={() => setMenuOpen(false)}
           modal={false}
-        />
+        /> */}
       </Actions>
     </DocumentLink>
   );
