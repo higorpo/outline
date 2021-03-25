@@ -1,5 +1,8 @@
 // @flow
+import fs from "fs";
 import http from "http";
+import https from "https";
+import path from "path";
 import IO from "socket.io";
 import socketRedisAdapter from "socket.io-redis";
 import SocketAuth from "socketio-auth";
@@ -10,7 +13,23 @@ import { client, subscriber } from "./redis";
 import { getUserForJWT } from "./utils/jwt";
 import { checkMigrations } from "./utils/startup";
 
-const server = http.createServer(app.callback());
+let server;
+
+if (process.env.FORCE_HTTPS === "true") {
+  const options = {
+    key: fs.readFileSync(
+      path.resolve(__dirname, "..", "serverssl", "server.key")
+    ),
+    cert: fs.readFileSync(
+      path.resolve(__dirname, "..", "serverssl", "server.crt")
+    ),
+  };
+
+  server = https.createServer(options, app.callback());
+} else {
+  server = http.createServer(app.callback());
+}
+
 let io;
 
 const { can } = policy;
