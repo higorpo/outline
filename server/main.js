@@ -17,9 +17,11 @@ let server;
 
 if (process.env.FORCE_HTTPS === "true") {
   const options = {
-    key: fs.readFileSync(path.resolve(__dirname, "..", "serverssl", "key.pem")),
+    key: fs.readFileSync(
+      path.resolve(__dirname, "..", "..", "serverssl", "key.pem")
+    ),
     cert: fs.readFileSync(
-      path.resolve(__dirname, "..", "serverssl", "cert.pem")
+      path.resolve(__dirname, "..", "..", "serverssl", "cert.pem")
     ),
   };
 
